@@ -1,0 +1,72 @@
+[
+  {
+    "slug": "santa_rita_1",
+    "name": "Santa Rita 1",
+    "code": "SR-SN-01",
+    "station_id": "SmartNode-SantaRita1",
+    "azimuth_deg": 30.0,
+    "start_date": "2026-05-01",
+    "sample_freq": "6h",
+    "sensor_to_plot": "1a",
+    "n_raw_rows": 21888,
+    "n_sampled_rows": 1926,
+    "n_payload_records": 1558,
+    "n_declared_sensors": 15,
+    "n_valid_sensors": 15,
+    "first_timestamp": "2026-05-01T00:16:19",
+    "last_timestamp": "2026-05-29T12:20:37",
+    "latest_rssi": -19,
+    "latest_heap": 103528,
+    "latest_uptime_s": 45016,
+    "latest_resultant_mm": 1.845527588453517,
+    "figures": {
+      "availability": "figures/santa_rita_1/availability.png",
+      "rssi": "figures/santa_rita_1/rssi.png",
+      "pitch_correction": "figures/santa_rita_1/pitch_correction_over_time.png",
+      "roll_correction": "figures/santa_rita_1/roll_correction_over_time.png",
+      "profiles_raw": "figures/santa_rita_1/cumulative_displacement_profiles_raw.png",
+      "profiles_corrected": "figures/santa_rita_1/cumulative_displacement_profiles_corr.png",
+      "latest_profile": "figures/santa_rita_1/latest_corrected_profile.png",
+      "sensor_evolution": "figures/santa_rita_1/displacement_evolution_sensor_1a.png"
+    },
+    "tables": {
+      "availability": "tables/santa_rita_1/availability.csv",
+      "latest_displacement": "tables/santa_rita_1/latest_displacement.csv"
+    }
+  },
+  {
+    "slug": "la_palmera",
+    "name": "La Palmera",
+    "code": "VLP",
+    "station_id": "SmartNode-LaPalmera",
+    "azimuth_deg": 295.0,
+    "start_date": "2026-04-06",
+    "sample_freq": "6h",
+    "sensor_to_plot": "3a",
+    "n_raw_rows": 34200,
+    "n_sampled_rows": 3132,
+    "n_payload_records": 2164,
+    "n_declared_sensors": 15,
+    "n_valid_sensors": 13,
+    "first_timestamp": "2026-04-10T06:55:56",
+    "last_timestamp": "2026-05-29T12:19:59",
+    "latest_rssi": -46.0,
+    "latest_heap": 103764.0,
+    "latest_uptime_s": 45018.0,
+    "latest_resultant_mm": 8.422724615830099,
+    "figures": {
+      "availability": "figures/la_palmera/availability.png",
+      "rssi": "figures/la_palmera/rssi.png",
+      "pitch_correction": "figures/la_palmera/pitch_correction_over_time.png",
+      "roll_correction": "figures/la_palmera/roll_correction_over_time.png",
+      "profiles_raw": "figures/la_palmera/cumulative_displacement_profiles_raw.png",
+      "profiles_corrected": "figures/la_palmera/cumulative_displacement_profiles_corr.png",
+      "latest_profile": "figures/la_palmera/latest_corrected_profile.png",
+      "sensor_evolution": "figures/la_palmera/displacement_evolution_sensor_3a.png"
+    },
+    "tables": {
+      "availability": "tables/la_palmera/availability.csv",
+      "latest_displacement": "tables/la_palmera/latest_displacement.csv"
+    }
+  }
+]

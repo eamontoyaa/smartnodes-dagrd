@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SmartNodes DAGRD · MVP</title>
+  <meta name="description" content="MVP estático para visualizar lecturas de inclinómetros remotos SmartNode/DAGRD.">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">MVP · Inclinómetros remotos</p>
+      <h1>SmartNodes DAGRD</h1>
+      <p>
+        Reporte web estático generado automáticamente desde las lecturas JSONL del repositorio.
+        En cada commit a <code>main</code>, GitHub Actions reprocesa los datos, actualiza las figuras
+        y publica esta página en GitHub Pages.
+      </p>
+      <nav class="nav-pills" aria-label="Estaciones"><a href="#santa_rita_1">Santa Rita 1</a><a href="#la_palmera">La Palmera</a></nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="intro-card">
+      <div>
+        <p class="eyebrow">Resumen del build</p>
+        <h2>Monitoreo reproducible, sin backend por ahora.</h2>
+        <p>
+          El sitio publica figuras PNG y tablas CSV generadas con el paquete Python del repositorio.
+          La página es intencionalmente simple: ideal para validar el flujo de datos, procesamiento,
+          corrección de deriva y despliegue antes de evolucionar a un dashboard interactivo.
+        </p>
+      </div>
+      <div class="workflow-box">
+        Datos crudos → lectura JSONL → ángulos Euler → corrección de deriva por mediana móvil → desplazamientos acumulados → figuras → GitHub Pages
+        <br><br>
+        Build: 2026-05-29 17:59 UTC<br>
+        Registros crudos: 3.722<br>
+        Filas procesadas: 5.058
+      </div>
+    </section>
+
+    
+    <section class="station-section" id="santa_rita_1">
+      <div class="station-heading">
+        <div>
+          <p class="eyebrow">SR-SN-01 · SmartNode-SantaRita1</p>
+          <h2>Santa Rita 1</h2>
+        </div>
+        <div class="station-actions">
+          <a href="tables/santa_rita_1/availability.csv">Disponibilidad CSV</a>
+          <a href="tables/santa_rita_1/latest_displacement.csv">Último perfil CSV</a>
+        </div>
+      </div>
+      <div class="metrics-grid">
+    <div class="metric">
+      <span>Periodo</span>
+      <strong>2026-05-01 00:16 → 2026-05-29 12:20</strong>
+      
+    </div>
+    
+    <div class="metric">
+      <span>Sensores válidos</span>
+      <strong>15 / 15</strong>
+      <small>perfil declarado</small>
+    </div>
+    
+    <div class="metric">
+      <span>Lecturas procesadas</span>
+      <strong>1.926</strong>
+      <small>submuestreo 6h</small>
+    </div>
+    
+    <div class="metric">
+      <span>RSSI reciente</span>
+      <strong>-19 dBm</strong>
+      
+    </div>
+    
+    <div class="metric">
+      <span>Desp. resultante máx.</span>
+      <strong>1.85 mm</strong>
+      <small>último perfil corregido</small>
+    </div>
+    
+    <div class="metric">
+      <span>Azimut eje A</span>
+      <strong>30.0°</strong>
+      
+    </div>
+    </div>
+      <div class="figures-grid">
+    <figure class="figure-card">
+      <a href="figures/santa_rita_1/latest_corrected_profile.png" target="_blank" rel="noreferrer">
+        <img src="figures/santa_rita_1/latest_corrected_profile.png" alt="Perfil corregido más reciente" loading="lazy">
+      </a>
+      <figcaption>
+        <strong>Perfil corregido más reciente</strong>
+        <span>Desplazamientos acumulados Norte-Este con corrección de deriva.</span>
+      </figcaption>
+    </figure>
+    
+    <figure class="figure-card">
+      <a href="figures/santa_rita_1/cumulative_displacement_profiles_corr.png" target="_blank" rel="noreferrer">
+        <img src="figures/santa_rita_1/cumulative_displacement_profiles_corr.png" alt="Evolución de perfiles corregidos" loading="lazy">
+      </a>
+      <figcaption>
+        <strong>Evolución de perfiles corregidos</strong>
+        <span>Perfiles acumulados seleccionados cada 7 días.</span>
+      </figcaption>
+    </figure>
+    
+    <figure class="figure-card">
+      <a href="figures/santa_rita_1/pitch_correction_over_time.png" target="_blank" rel="noreferrer">
+        <img src="figures/santa_rita_1/pitch_correction_over_time.png" alt="Pitch original vs corregido" loading="lazy">
+      </a>
+      <figcaption>
+        <strong>Pitch original vs corregido</strong>
+        <span>Comparación por sensor luego de remover la deriva lenta.</span>
+      </figcaption>
+    </figure>
+    
+    <figure class="figure-card">
+      <a href="figures/santa_rita_1/roll_correction_over_time.png" target="_blank" rel="noreferrer">
+        <img src="figures/santa_rita_1/roll_correction_over_time.png" alt="Roll original vs corregido" loading="lazy">
+      </a>
+      <figcaption>
+        <strong>Roll original vs corregido</strong>
+        <span>Comparación por sensor luego de remover la deriva lenta.</span>
+      </figcaption>
+    </figure>
+    
+    <figure class="figure-card">
+      <a href="figures/santa_rita_1/displacement_evolution_sensor_1a.png" target="_blank" rel="noreferrer">
+        <img src="figures/santa_rita_1/displacement_evolution_sensor_1a.png" alt="Evolución sensor 1a" loading="lazy">
+      </a>
+      <figcaption>
+        <strong>Evolución sensor 1a</strong>
+        <span>Trayectoria temporal del desplazamiento acumulado corregido.</span>
+      </figcaption>
+    </figure>
+    
+    <figure class="figure-card">
+      <a href="figures/santa_rita_1/availability.png" target="_blank" rel="noreferrer">
+        <img src="figures/santa_rita_1/availability.png" alt="Disponibilidad de datos" loading="lazy">
+      </a>
+      <figcaption>
+        <strong>Disponibilidad de datos</strong>
+        <span>Porcentaje de lecturas con quaternion completo en el periodo procesado.</span>
+      </figcaption>
+    </figure>
+    
+    <figure class="figure-card">
+      <a href="figures/santa_rita_1/rssi.png" target="_blank" rel="noreferrer">
+        <img src="figures/santa_rita_1/rssi.png" alt="Señal RSSI" loading="lazy">
+      </a>
+      <figcaption>
+        <strong>Señal RSSI</strong>
+        <span>Seguimiento básico de comunicación del nodo.</span>
+      </figcaption>
+    </figure>
+    
+    <figure class="figure-card">
+      <a href="figures/santa_rita_1/cumulative_displacement_profiles_raw.png" target="_blank" rel="noreferrer">
+        <img src="figures/santa_rita_1/cumulative_displacement_profiles_raw.png" alt="Perfiles sin corrección" loading="lazy">
+      </a>
+      <figcaption>
+        <strong>Perfiles sin corrección</strong>
+        <span>Referencia para comparar el efecto de la corrección aplicada.</span>
+      </figcaption>
+    </figure>
+    </div>
+    </section>
+    
+
+    <section class="station-section" id="la_palmera">
+      <div class="station-heading">
+        <div>
+          <p class="eyebrow">VLP · SmartNode-LaPalmera</p>
+          <h2>La Palmera</h2>
+        </div>
+        <div class="station-actions">
+          <a href="tables/la_palmera/availability.csv">Disponibilidad CSV</a>
+          <a href="tables/la_palmera/latest_displacement.csv">Último perfil CSV</a>
+        </div>
+      </div>
+      <div class="metrics-grid">
+    <div class="metric">
+      <span>Periodo</span>
+      <strong>2026-04-10 06:55 → 2026-05-29 12:19</strong>
+      
+    </div>
+    
+    <div class="metric">
+      <span>Sensores válidos</span>
+      <strong>13 / 15</strong>
+      <small>perfil declarado</small>
+    </div>
+    
+    <div class="metric">
+      <span>Lecturas procesadas</span>
+      <strong>3.132</strong>
+      <small>submuestreo 6h</small>
+    </div>
+    
+    <div class="metric">
+      <span>RSSI reciente</span>
+      <strong>-46.0 dBm</strong>
+      
+    </div>
+    
+    <div class="metric">
+      <span>Desp. resultante máx.</span>
+      <strong>8.42 mm</strong>
+      <small>último perfil corregido</small>
+    </div>
+    
+    <div class="metric">
+      <span>Azimut eje A</span>
+      <strong>295.0°</strong>
+      
+    </div>
+    </div>
+      <div class="figures-grid">
+    <figure class="figure-card">
+      <a href="figures/la_palmera/latest_corrected_profile.png" target="_blank" rel="noreferrer">
+        <img src="figures/la_palmera/latest_corrected_profile.png" alt="Perfil corregido más reciente" loading="lazy">
+      </a>
+      <figcaption>
+        <strong>Perfil corregido más reciente</strong>
+        <span>Desplazamientos acumulados Norte-Este con corrección de deriva.</span>
+      </figcaption>
+    </figure>
+    
+    <figure class="figure-card">
+      <a href="figures/la_palmera/cumulative_displacement_profiles_corr.png" target="_blank" rel="noreferrer">
+        <img src="figures/la_palmera/cumulative_displacement_profiles_corr.png" alt="Evolución de perfiles corregidos" loading="lazy">
+      </a>
+      <figcaption>
+        <strong>Evolución de perfiles corregidos</strong>
+        <span>Perfiles acumulados seleccionados cada 7 días.</span>
+      </figcaption>
+    </figure>
+    
+    <figure class="figure-card">
+      <a href="figures/la_palmera/pitch_correction_over_time.png" target="_blank" rel="noreferrer">
+        <img src="figures/la_palmera/pitch_correction_over_time.png" alt="Pitch original vs corregido" loading="lazy">
+      </a>
+      <figcaption>
+        <strong>Pitch original vs corregido</strong>
+        <span>Comparación por sensor luego de remover la deriva lenta.</span>
+      </figcaption>
+    </figure>
+    
+    <figure class="figure-card">
+      <a href="figures/la_palmera/roll_correction_over_time.png" target="_blank" rel="noreferrer">
+        <img src="figures/la_palmera/roll_correction_over_time.png" alt="Roll original vs corregido" loading="lazy">
+      </a>
+      <figcaption>
+        <strong>Roll original vs corregido</strong>
+        <span>Comparación por sensor luego de remover la deriva lenta.</span>
+      </figcaption>
+    </figure>
+    
+    <figure class="figure-card">
+      <a href="figures/la_palmera/displacement_evolution_sensor_3a.png" target="_blank" rel="noreferrer">
+        <img src="figures/la_palmera/displacement_evolution_sensor_3a.png" alt="Evolución sensor 3a" loading="lazy">
+      </a>
+      <figcaption>
+        <strong>Evolución sensor 3a</strong>
+        <span>Trayectoria temporal del desplazamiento acumulado corregido.</span>
+      </figcaption>
+    </figure>
+    
+    <figure class="figure-card">
+      <a href="figures/la_palmera/availability.png" target="_blank" rel="noreferrer">
+        <img src="figures/la_palmera/availability.png" alt="Disponibilidad de datos" loading="lazy">
+      </a>
+      <figcaption>
+        <strong>Disponibilidad de datos</strong>
+        <span>Porcentaje de lecturas con quaternion completo en el periodo procesado.</span>
+      </figcaption>
+    </figure>
+    
+    <figure class="figure-card">
+      <a href="figures/la_palmera/rssi.png" target="_blank" rel="noreferrer">
+        <img src="figures/la_palmera/rssi.png" alt="Señal RSSI" loading="lazy">
+      </a>
+      <figcaption>
+        <strong>Señal RSSI</strong>
+        <span>Seguimiento básico de comunicación del nodo.</span>
+      </figcaption>
+    </figure>
+    
+    <figure class="figure-card">
+      <a href="figures/la_palmera/cumulative_displacement_profiles_raw.png" target="_blank" rel="noreferrer">
+        <img src="figures/la_palmera/cumulative_displacement_profiles_raw.png" alt="Perfiles sin corrección" loading="lazy">
+      </a>
+      <figcaption>
+        <strong>Perfiles sin corrección</strong>
+        <span>Referencia para comparar el efecto de la corrección aplicada.</span>
+      </figcaption>
+    </figure>
+    </div>
+    </section>
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <p>
+        Generado por <code>scripts/build_site.py</code>. Para actualizar el reporte, agrega nuevas lecturas
+        en <code>data/raw/</code> y haz commit a la rama <code>main</code>.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
